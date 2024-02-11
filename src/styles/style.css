@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+
+
+:root{
+  ---color-font: #000;
+}
+
+
+
+.body-background-home{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+  place-items: center;
+  min-width: 300px;
+  min-height: 100vh;
+  padding: 0;
+  background-image: url('https://raw.githubusercontent.com/GravesStone/sunrise/main/imges/hero.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Optional: adjusts the background image size to cover the entire element */
+  
+
+}
+.body-background-2{
+  margin: 0;
+
+ 
+
+  padding: 0;
+  background-image: url('https://raw.githubusercontent.com/GravesStone/sunrise/main/imges/hero.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Optional: adjusts the background image size to cover the entire element */
+  
+
+}
+.header{
+  position: absolute;
+  top: 10%;
+  right: 20%;
+}
+
+
+  .hero-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 300px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .container {
+    max-width: 1500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#currentWeatherInfo {
+    margin-top: 20px;
+}
+
+#forecastInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 150px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 5px;
+  text-align: left; /* Align text to the left */
+}
+
+
+  
+  nav {
+    display: flex;
+    gap: 8px;
+  }
+  
+ 
