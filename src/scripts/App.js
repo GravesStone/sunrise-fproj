@@ -2,8 +2,8 @@ import { createElement } from './utils';
 import { initRouter } from './router';
 
 function Header() {
-  const appTitle = createElement('h1', {
-    textContent: 'Sunrise',
+  const appTitle = createElement('h2', {
+
     className: 'heading', // Assuming you want to use this class for styling
   });
 
@@ -11,17 +11,25 @@ function Header() {
   const Home = createElement('a', {
     href: '/#/Home',
     textContent: 'Home',
+    className: 'nav-link', // Add class name
   });
   const page2 = createElement('a', {
-    href: '/#/page2',
-    textContent: 'Page 2',
+    href: '/#/search',
+    textContent: '🔎Search',
+    className: 'nav-link', // Add class name
   });
   const page3 = createElement('a', {
     href: '/#/page3',
-    textContent: 'Page 3',
+    textContent: '⛅Status',
+    className: 'nav-link', // Add class name
+  });
+  const about = createElement('a', {
+    href: '/#/page3',
+    textContent: 'About',
+    className: 'nav-link', // Add class name
   });
 
-  const nav = createElement('nav', {}, [Home, page2, page3]);
+  const nav = createElement('nav', {}, [Home, page2, page3,about]);
 
   return createElement('header', { className: 'header' }, [appTitle, nav]); // Apply the 'header' class
 }
@@ -30,7 +38,7 @@ function Footer() {
   const footer = createElement('footer', { className: 'footer', id: 'footer-id' }, []);
 
   const copyright = createElement('span', {
-    textContent: `Copyright © ${new Date().getFullYear()}`
+    textContent: `Copyright © ${new Date().getFullYear()} Mark Augustine Estimada`
   });
 
   footer.appendChild(copyright);

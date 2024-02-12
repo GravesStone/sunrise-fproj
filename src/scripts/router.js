@@ -1,9 +1,9 @@
 import { createElement } from './utils';
 // Navigation
 import Home from './Home';
-import Counter from './Counter';
+import search from './search';
 import Page3 from './page3';
-
+import about from './about';
 export function initRouter(mainView) {
   function updateView(newView) {
     mainView.innerHTML = '';
@@ -16,12 +16,15 @@ export function initRouter(mainView) {
         updateView(Home());
         break;
 
-      case '#/page2':
-        updateView(Counter());
+      case '#/search':
+        updateView(search());
         break;
 
       case '#/page3':
         updateView(Page3());
+        break;
+      case '#/about':
+        updateView(about());
         break;
 
       default:

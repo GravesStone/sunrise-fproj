@@ -37,7 +37,7 @@ function WeatherApp() {
 
     if (data.cod === '404') {
       currentWeatherInfo.textContent = 'City not found';
-    } else {
+    } else if (data.main && data.weather && data.weather.length > 0) {
       const cityName = data.name;
       const temperature = Math.round(data.main.temp - 273.15); // Convert temperature from Kelvin to Celsius
       const description = data.weather[0].description;
@@ -51,6 +51,8 @@ function WeatherApp() {
       const weatherIcon = createElement('img', { src: iconUrl, alt: 'Weather Icon', className: 'weather-icon' });
 
       currentWeatherInfo.appendChild(createElement('div', { className: 'current-weather' }, [weatherText, weatherIcon]));
+    } else {
+      currentWeatherInfo.textContent = 'Error fetching weather data';
     }
   }
 
@@ -122,7 +124,6 @@ function WeatherApp() {
   }
 
   function calculateWindChill(temperature, windSpeed) {
-   
     const windChill = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
     return Math.round(windChill * 10) / 10;
   }
@@ -134,10 +135,10 @@ function WeatherApp() {
   }
 
   return createElement('div', { className: 'container' }, [
-    createElement('h1', { textContent: 'Weather App' }),
+    createElement('h2', { textContent: 'Weather Search' }),
     createElement('div', { className: 'input-container' }, [
       createElement('input', { id: 'cityInput', type: 'text', placeholder: 'Enter city name' }),
-      createElement('button', { id: 'searchBtn', textContent: 'Search', onclick: handleSearch })
+      createElement('button', { id: 'searchBtn', textContent: '🔍Search', onclick: handleSearch })
     ]),
     createElement('div', { id: 'currentWeatherInfo', className: 'current-weather' }),
     createElement('div', { id: 'forecastInfo', className: 'forecast' }),
