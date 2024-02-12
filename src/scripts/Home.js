@@ -2,6 +2,31 @@
 import { createElement } from './utils';
 
 function Home() {
+  // Array of possible greetings
+  const greetings = [
+    "Welcome to our platform!",
+    "Welcome back! Happy to see you again.",
+    "Hello there! We're glad you're here.",
+    "Hey! It's great to have you back.",
+    "Greetings! Ready to explore more?",
+  ];
+
+  // Check if the user has visited the platform before
+  if(localStorage.getItem('firstVisit') === null) {
+      // If it's their first visit, greet them with a random message
+      var greetingIndex = Math.floor(Math.random() * greetings.length);
+      var greeting = greetings[greetingIndex];
+      // Store the information that the user has visited the platform
+      localStorage.setItem('firstVisit', 'true');
+  } else {
+      // If they've visited before, greet them with a welcome back message
+      var greeting = greetings[1]; // Always use the second greeting for returning users
+  }
+
+  // Create a paragraph element for the greeting
+  const greetingParagraph = createElement('p', { textContent: greeting });
+
+  // Create a button link for navigating to search
   const searchLink = createElement('a', {
     href: '/#/search',
     textContent: 'See more Weather Status',
@@ -13,7 +38,7 @@ function Home() {
     createElement('h1', { textContent: '☀️Sunrise' }), // Title directly included in the hero section
     createElement('h2', { className: 'hero-title', textContent: 'Embrace the dawn of a new day' }),
     createElement('p', { textContent: "where each sunrise paints the sky with endless possibilities." }),
-    
+    greetingParagraph, // Include the greeting paragraph in the hero section
     searchLink, // Include the page 3 link in the hero section
   ]);
 

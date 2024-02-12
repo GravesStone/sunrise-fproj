@@ -75,7 +75,7 @@
     text-align: center;
     color: var(--secondary-color);
     border-radius: 20px;
-    animation:fadeIn 5s;
+    animation:fadeIn 3s;
   }
   @keyframes fadeIn {
     0% { opacity: 0; }
@@ -112,78 +112,84 @@
   }
   .container {
     max-width: 1000px;
-    margin: 10px auto;
+    margin: 0 auto;
     text-align: center;
-}
-  .container h2{
-    color:var(---color-font);
-  
   }
-
-input[type="text"] {
+  
+  .container h2 {
+    color: var(--color-font);
+  }
+  
+  .input-container input[type="text"] {
     padding: 10px;
     width: 200px;
-}
-
-button {
-  padding: 12px 20px;
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease; /* Adding transition */
-}
-
-button:hover {
-  background-color: #45a049;
-  transform: translateX(-5px); /* Move button up by 5px on hover */
-}
-
-
-#currentWeatherInfo {
+  }
+  
+  .input-container button {
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .input-container button:hover {
+    background-color: #45a049;
+    transform: translateX(-5px);
+  }
+  
+  #currentWeatherInfo {
     position: absolute;
-    top:2%;
+    top: 2%;
     left: 6%;
     margin-top: 20px;
     max-width: 400px;
     color: var(--secondary-color);
     padding: 5px;
     border-radius: 25px;
-
-}
-
-#forecastInfo {
+  }
+  
+  #forecastInfo {
     display: flex;
     flex-wrap: inherit;
     justify-content: center;
     font-size: 10px;
     gap: 5px;
     padding: 30px;
-}
-
-.card {
+  }
+  
+  .card {
     width: 400px;
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.card:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-
-
-.card-content {
-  padding: 0; /* Add padding inside the card content */
-}
-
-
-.weather-icon {
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-content {
+    padding: 0;
+  }
+  
+  .weather-icon {
     width: 50px;
     height: 50px;
     margin: auto;
-}
+  }
+  
+  .recent-searches {
+    font-size: 14px;
+  }
+  
+  .recent-searches option {
+    font-size: 14px;
+  }
+  
+  
 
 .footer {
   position: absolute;
