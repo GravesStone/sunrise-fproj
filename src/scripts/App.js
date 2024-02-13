@@ -24,12 +24,23 @@ function Header() {
     className: 'nav-link', // Add class name
   });
   const about = createElement('a', {
-    href: '/#/page3',
+    href: '/#/about',
     textContent: 'About',
     className: 'nav-link', // Add class name
   });
 
-  const nav = createElement('nav', {}, [Home, page2, page3,about]);
+  const nav = createElement('nav', {}, [Home, page2, page3, about]);
+
+  // Function to change background image class
+  const changeBackgroundImage = (className) => {
+    document.body.className = className; // Change body's class to the provided class
+  };
+
+  // Add event listener to each link
+  Home.addEventListener('click', () => changeBackgroundImage('body-background-home'));
+  page2.addEventListener('click', () => changeBackgroundImage('body-background-search'));
+  page3.addEventListener('click', () => changeBackgroundImage('body-background-status'));
+  about.addEventListener('click', () => changeBackgroundImage('body-background-about')); // Remove background image class when clicking on about link
 
   return createElement('header', { className: 'header' }, [appTitle, nav]); // Apply the 'header' class
 }

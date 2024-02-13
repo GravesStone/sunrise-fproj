@@ -23,6 +23,7 @@ export function initRouter(mainView) {
       case '#/page3':
         updateView(Page3());
         break;
+        
       case '#/about':
         updateView(about());
         break;

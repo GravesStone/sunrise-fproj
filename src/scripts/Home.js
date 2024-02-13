@@ -1,4 +1,3 @@
-// Home.js
 import { createElement } from './utils';
 
 function Home() {
@@ -19,8 +18,11 @@ function Home() {
       // Store the information that the user has visited the platform
       localStorage.setItem('firstVisit', 'true');
   } else {
-      // If they've visited before, greet them with a welcome back message
-      var greeting = greetings[1]; // Always use the second greeting for returning users
+      // Reset the 'firstVisit' value to null to make greeting random on every visit
+      localStorage.removeItem('firstVisit');
+      // Greet them with a random message
+      var greetingIndex = Math.floor(Math.random() * greetings.length);
+      var greeting = greetings[greetingIndex];
   }
 
   // Create a paragraph element for the greeting
