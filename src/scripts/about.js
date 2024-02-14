@@ -34,10 +34,12 @@ function About() {
   const handleMessageClick = () => {
     const name = document.getElementById('name').value;
     const message = document.getElementById('message').value;
+    const sourceLink = 'https://example.com'; // Replace 'https://example.com' with your actual source link
 
     const data = {
       name: name,
-      message: message
+      message: message,
+      source: sourceLink // Include the source link in the data object
     };
 
     const jsonData = JSON.stringify(data);
