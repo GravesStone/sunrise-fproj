@@ -10,6 +10,11 @@ function Home() {
     "Greetings! Ready to explore more?",
   ];
 
+  // Function to change background search
+  function changeBackground() {
+    document.body.classList.toggle('body-background-search');
+  }
+
   // Check if the user has visited the platform before
   if(localStorage.getItem('firstVisit') === null) {
       // If it's their first visit, greet them with a random message
@@ -34,6 +39,9 @@ function Home() {
     textContent: 'See more Weather Status',
     className: 'button-link', // Add a class to style the link as a button
   });
+
+  // Add onclick event listener directly to the searchLink
+  searchLink.onclick = changeBackground;
 
   // Create a hero section with fade-in effect
   const heroSection = createElement('div', { className: 'hero-section fade-in' }, [

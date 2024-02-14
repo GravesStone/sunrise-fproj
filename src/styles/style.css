@@ -256,23 +256,23 @@
 
 .about-container {
   position: absolute;
-  top:11%;
+  top:-1%;
   left:  5%;
-  max-width: 800px;
+
   margin: 0 auto;
-  padding: 15px;
+  padding: 5px;
   background-color: var(--font-words-color);
   border-radius: 25px;
 }
 
 .about-heading {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .about-text {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -298,4 +298,67 @@
 }
 
 
+/* styles.css */
 
+.body-background-about {
+  background-color: #f0f0f0;
+}
+
+.about-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.about-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.card-about {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  margin-bottom: 15px;
+}
+
+.message-form {
+  margin-top: 20px;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.message-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-form button:hover {
+  background-color: #0056b3;
+}
+
+.message-result {
+  position: absolute;
+  right: 20%;
+  top: 5%;
+  margin-top: 10px;
+  font-style: italic;
+  color: #007bff;
+}
