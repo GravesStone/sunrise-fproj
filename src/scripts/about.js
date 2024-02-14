@@ -34,7 +34,7 @@ function About() {
   const handleMessageClick = () => {
     const name = document.getElementById('name').value;
     const message = document.getElementById('message').value;
-    const sourceLink = 'https://example.com'; // Replace 'https://example.com' with your actual source link
+    const sourceLink = 'https://github.com/GravesStone/sunrise-fproj/blob/main/src/data/databout.json'; // Replace 'https://example.com' with your actual source link
 
     const data = {
       name: name,
