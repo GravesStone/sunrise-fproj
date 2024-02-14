@@ -101,6 +101,7 @@
 }
 
 .container {
+  animation: fadeIn 3s;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -192,6 +193,7 @@
 /*======= Status Page =======*/
 
 .container-status {
+  animation: fadeIn 3s;
   position: absolute;
   top: 25%;
   right: 5%;
@@ -255,6 +257,7 @@
 /* about.css */
 
 .about-container {
+  animation: fadeIn 2s;
   position: absolute;
   top:-1%;
   left:  5%;
@@ -278,16 +281,18 @@
 }
 
 .message-button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--third-color-blue);
+  color: var(--font-words-color);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .message-button:hover {
-  background-color: #0056b3;
+
+  border-color: #ff0000; /* Change to your desired border color */
 }
 
 .card-about {
@@ -353,12 +358,14 @@
 .message-form button:hover {
   background-color: #0056b3;
 }
-
-.message-result {
+#log {
   position: absolute;
-  right: 20%;
-  top: 5%;
-  margin-top: 10px;
-  font-style: italic;
-  color: #007bff;
+  top: 32%;
+  right: -92%;
+  font-size: 20px;
+  color: var(--font-words-color);
+  margin: 20px;
+  text-align: left;
+  background-color: transparent;
+  background-color: var(--secondary-color);
 }

@@ -49,7 +49,7 @@ function Footer() {
   const footer = createElement('footer', { className: 'footer', id: 'footer-id' }, []);
 
   const copyright = createElement('span', {
-    textContent: `Copyright © ${new Date().getFullYear()} Mark Augustine Estimada`
+    textContent: `Copyright © ${new Date().getFullYear()} Mark Augustine Estimada (wdd330 Final Project)`
   });
 
   footer.appendChild(copyright);
