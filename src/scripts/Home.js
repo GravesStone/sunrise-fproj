@@ -45,7 +45,7 @@ function Home() {
 
   // Create a logo element
   const logo = createElement('img', {
-    src: './logo.png',
+    src: 'https://raw.githubusercontent.com/GravesStone/sunrise-fproj/main/src/images/logo.webp',
     alt: 'Logo',
     className: 'logo',
   });

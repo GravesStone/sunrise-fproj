@@ -61,11 +61,13 @@
 }
 .logo {
   position: absolute;
-  top: 20px; /* Adjust the top position */
-  left: 20px; /* Adjust the left position */
-  width: 100px; /* Adjust the width */
+  top: -45%; /* Adjust the top position */
+  left: 25%; /* Adjust the left position */
+  width: 170px; /* Adjust the width */
   height: auto; /* Maintain aspect ratio */
+  animation: 3s;
 }
+
 
 .hero-section {
   background-color: var(--font-words-color);
