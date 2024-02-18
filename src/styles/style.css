@@ -59,6 +59,13 @@
 .nav-link:hover {
   transform: scale(1.1); /* Adjust the scale factor as needed */
 }
+.logo {
+  position: absolute;
+  top: 20px; /* Adjust the top position */
+  left: 20px; /* Adjust the left position */
+  width: 100px; /* Adjust the width */
+  height: auto; /* Maintain aspect ratio */
+}
 
 .hero-section {
   background-color: var(--font-words-color);

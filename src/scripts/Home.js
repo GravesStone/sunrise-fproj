@@ -43,9 +43,16 @@ function Home() {
   // Add onclick event listener directly to the searchLink
   searchLink.onclick = changeBackground;
 
+  // Create a logo element
+  const logo = createElement('img', {
+    src: './logo.png',
+    alt: 'Logo',
+    className: 'logo',
+  });
+
   // Create a hero section with fade-in effect
   const heroSection = createElement('div', { className: 'hero-section fade-in' }, [
-    createElement('h1', { textContent: '☀️Sunrise' }), // Title directly included in the hero section
+    logo, // Include the logo
     createElement('h2', { className: 'hero-title', textContent: 'Embrace the dawn of a new day' }),
     createElement('p', { textContent: "where each sunrise paints the sky with endless possibilities." }),
     greetingParagraph, // Include the greeting paragraph in the hero section
